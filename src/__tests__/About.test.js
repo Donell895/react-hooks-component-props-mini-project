@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import About from "../components/About";
-import logo from "../assets/logo"
+import logo from "../assets/logo";
 
 test("renders a <aside> element", () => {
   const { container } = render(<About />);
@@ -23,6 +23,7 @@ test("uses a default value for the image if no image is passed as a prop", () =>
 });
 
 test("renders a <p> with the about text", () => {
+
   render(<About about="About this blog" />);
   const p = screen.queryByText("About this blog");
   expect(p).toBeInTheDocument();
